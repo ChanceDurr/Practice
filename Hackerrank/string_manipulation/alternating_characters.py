@@ -4,7 +4,8 @@ change it into a string such that there are no matching adjacent characters.
 To do this, you are allowed to delete zero or more characters in the string.
 Your task is to find the minimum number of required deletions.
 '''
-s = 'AAABBABABABBABABABAB'
+
+import sys
 
 def alternatingCharacters(s):
     s = list(s)
@@ -15,3 +16,7 @@ def alternatingCharacters(s):
             del s[i]
     
     return count
+
+s = sys.argv[1]
+
+print('Characters to remove: ', alternatingCharacters(s))
